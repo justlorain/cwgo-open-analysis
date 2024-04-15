@@ -17,6 +17,9 @@ package cron
 import (
 	"context"
 	"errors"
+	"log/slog"
+	"time"
+
 	"github.com/cloudwego-contrib/cwgo-open-analysis/client/graphql"
 	"github.com/cloudwego-contrib/cwgo-open-analysis/client/rest"
 	"github.com/cloudwego-contrib/cwgo-open-analysis/config"
@@ -24,8 +27,6 @@ import (
 	"github.com/cloudwego-contrib/cwgo-open-analysis/pkg/cleaner"
 	"github.com/cloudwego-contrib/cwgo-open-analysis/storage"
 	"github.com/cloudwego-contrib/cwgo-open-analysis/util"
-	"log/slog"
-	"time"
 
 	"github.com/robfig/cron/v3"
 	"github.com/schollz/progressbar/v3"

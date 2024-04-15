@@ -15,12 +15,13 @@
 package storage
 
 import (
-	"github.com/cloudwego-contrib/cwgo-open-analysis/config"
-	"github.com/cloudwego-contrib/cwgo-open-analysis/model"
-	"github.com/cloudwego-contrib/cwgo-open-analysis/util"
 	"log"
 	"os"
 	"time"
+
+	"github.com/cloudwego-contrib/cwgo-open-analysis/config"
+	"github.com/cloudwego-contrib/cwgo-open-analysis/model"
+	"github.com/cloudwego-contrib/cwgo-open-analysis/util"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

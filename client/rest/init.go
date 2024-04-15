@@ -16,6 +16,7 @@ package rest
 
 import (
 	"context"
+
 	"github.com/cloudwego-contrib/cwgo-open-analysis/config"
 
 	"github.com/google/go-github/v60/github"

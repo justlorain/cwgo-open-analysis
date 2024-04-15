@@ -16,6 +16,7 @@ package graphql
 
 import (
 	"context"
+
 	"github.com/cloudwego-contrib/cwgo-open-analysis/config"
 
 	"github.com/shurcooL/githubv4"

@@ -16,9 +16,10 @@ package cmd
 
 import (
 	"context"
+	"time"
+
 	"github.com/cloudwego-contrib/cwgo-open-analysis/api"
 	"github.com/cloudwego-contrib/cwgo-open-analysis/util"
-	"time"
 
 	"github.com/spf13/cobra"
 )

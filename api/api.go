@@ -16,6 +16,7 @@ package api
 
 import (
 	"context"
+
 	"github.com/cloudwego-contrib/cwgo-open-analysis/client/graphql"
 	"github.com/cloudwego-contrib/cwgo-open-analysis/client/rest"
 	"github.com/cloudwego-contrib/cwgo-open-analysis/config"
