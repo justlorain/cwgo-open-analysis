@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+  mysql:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=openalysis
+      - MYSQL_USER=openalysis
+      - MYSQL_PASSWORD=openalysis
+      - MYSQL_RANDOM_ROOT_PASSWORD="yes"
+    command:
+      --sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
+
+  grafana:
+    image: grafana/grafana:latest
+    environment:
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_AUTH_DISABLE_LOGIN_FORM=true
+    ports:
+      - "3000:3000"
+
+  cwgo-open-analysis:
+    build: .
+    command: ["start", "-c", "@daily", "-t", "your-github-token", "-r", "3"]
+    depends_on:
+      - mysql
+      - grafana
